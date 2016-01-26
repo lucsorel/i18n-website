@@ -1,9 +1,10 @@
 'use strict';
 
 // instantiates an ExpressJs web application
-var express = require('express');
-var website = express();
-var http = require('http').Server(website);
+var express = require('express'),
+    website = express(),
+    http = require('http').Server(website),
+    httpPort = process.env.PORT || 3001;
 
 // manages i18n routing of the index page
 var i18n = require('i18n-express')();
@@ -39,8 +40,8 @@ website.use(tplRouterUseUrl, i18nTplRouter);
 website.use(i18n.l10n404('404.html'));
 
 // starts the web aplication server
-http.listen(3001, function() {
-    console.log('listening on *:3001');
+http.listen(httpPort, function() {
+    console.log('listening on *:' + httpPort);
 });
 
 /** closes the database and the application */
