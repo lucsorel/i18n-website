@@ -7,8 +7,8 @@
   "main": "server.js",
   "scripts": {
     "dir-js": "if [ ! -d  public/js ]; then mkdir -p  public/js; elif [ \"$(ls -A public/js)\" ]; then rm -r public/js/*; fi",
-    "build-uglyfied-js": "browserify webapp/LocaleSelectorApp.js | uglifyjs -mc > public/js/locale-selector.js & browserify webapp/TodoApp.js | uglifyjs -mc > public/js/todo-app.js",
-    "build-js": "browserify webapp/LocaleSelectorApp.js > public/js/locale-selector.js & browserify webapp/TodoApp.js > public/js/todo-app.js",
+    "build-uglyfied-js": "node_modules/.bin/browserify webapp/LocaleSelectorApp.js | node_modules/.bin/uglifyjs -mc > public/js/locale-selector.js & node_modules/.bin/browserify webapp/TodoApp.js | node_modules/.bin/uglifyjs -mc > public/js/todo-app.js",
+    "build-js": "node_modules/.bin/browserify webapp/LocaleSelectorApp.js > public/js/locale-selector.js & node_modules/.bin/browserify webapp/TodoApp.js > public/js/todo-app.js",
     "prestart": "npm run dir-js && npm run build-uglyfied-js"
   },
   "dependencies": {
