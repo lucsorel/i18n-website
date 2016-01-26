@@ -13,12 +13,10 @@
   },
   "dependencies": {
     "express": "4.13.3",
-    "i18n-express": "lucsorel/i18n-express"
-  },
-  "devDependencies": {
-    "angular": "1.4.7",
+    "i18n-express": "lucsorel/i18n-express",
     "browserify": "10.2.4",
     "browserify-shim": "3.8.9",
+    "angular": "1.4.7",
     "lodash": "3.10.0",
     "uglify-js": "2.4.24",
     "ui-router": "0.2.15",
