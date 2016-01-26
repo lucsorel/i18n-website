@@ -44,5 +44,8 @@
   "bugs": {
     "url": "https://github.com/lucsorel/i18n-website/issues"
   },
-  "homepage": "https://github.com/lucsorel/i18n-website#readme"
+  "homepage": "https://github.com/lucsorel/i18n-website#readme",
+  "engines": {
+    "node": "4.2.2"
+  }
 }
